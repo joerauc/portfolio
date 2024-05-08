@@ -1,0 +1,341 @@
+<!--
+    ISSUES TO RESOLVE
+    -- Urgent --
+    (FIXED) Finish layout
+    (FIXED) Fix navbar references
+
+    -- Important --
+    (FIXED) Correct highlighting for navbar (temp fix applied: making all items always white)
+    - Socials partially covered by nav bar on smaller screens
+    - Find better way to present college info
+    
+    -- Useful --
+    - (placeholder)
+
+    -- Optional --
+    - Vertically center card content
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="portfolio.css" />
+    <title>Joseph Raucci Portfolio</title>
+</head>
+<body>
+    
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col my-4">
+                    <h1>Joseph Raucci</h1>
+                </div>
+                <div class="col-md-4 col-xl-2 mt-md-5"> <!-- Figure out correct highlighting -->
+                    <a href="https://www.linkedin.com/in/josephraucci" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                    <a href="https://github.com/joerauc" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" role="navigation">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" style="color:white" href="#about-me"><i class="fa-solid fa-user fa-lg text-white"></i> About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color:white" href="#experience"><i class="fa-solid fa-briefcase fa-lg text-white"></i> Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color:white" href="#languages"><i class="fa-solid fa-code fa-lg text-white"></i> Languages</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color:white" href="#education"><i class="fa-solid fa-graduation-cap fa-lg text-white"></i> Education</a></li>
+                </ul>
+                <!--
+                <span class="btn btn-info ms-auto">
+                    <a role="button" href="#contact-me" class="text-decoration-none text-light">
+                        <i class="fa fa-envelope"></i> Contact Me
+                    </a>
+                </span>
+                -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <main>
+        <!-- Name and Fun Facts-->
+        <div class="container-fluid">
+            <div class="row py-4">
+                <div class="col-md-3 offset-sm-2 align-self-center">
+                    <h2>Joseph</h2><br/>
+                    <h2>Raucci...</h2>
+                </div>
+                <div class="col align-self-center">
+                    <!-- carousel here -->
+                    <div id="funFactsCarousel" class="carousel slide carousel-fade">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card text-center"> <!-- Is there a way to vertically center? -->
+                                    <div class="card-body">
+                                        <p>is an aspiring developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <p>has been learning to code while working full time</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <p>graduated WebDev and backend coding bootcamps</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <p>watches TechWithTim, NeetCode, and other software channels on YouTube</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#funFactsCarousel" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#funFactsCarousel" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <span class="border-bottom" id="funFactsBottom"></span>
+            </div>
+        </div>
+
+        <!-- body -->
+        <div class="container-fluid py-4">
+        
+            <!-- About Me-->
+            <div class="row py-2" id="about-me"> 
+                <div class="col-md-3 ml-auto">
+                    <h2 class="body-title">About Me</h2>
+                </div>
+                <div class="col">
+                    <p>Though I started my coding journey early, I switched to finance and marketing in
+                        college. My family never had the experience of those in the business world,
+                        especially in finance, and I wanted to be able to provide that knowledge. I've
+                        since learned everything that I wanted to in the field, and am looking to move
+                        on to my next endeavor. 
+                    </p>
+                    <p>    
+                        An old interest in computer science led me down the path
+                        of pursuing software development. I went from coding text-based adventure games
+                        to managing databases with Docker. From creating an HTML website in high school
+                        to building a text editor with HTML, CSS, and JavaScript. Overall, I've learned
+                        much on my journey into sofware development, and I'm looking to take the
+                        next step on that path.
+                    </p>
+                </div>
+            </div>
+            
+             <!-- Experience -->
+             <div class="row py-2" id="experience">
+                <div class="col-md-3 ml-auto"> 
+                    <h2 class="body-title">Experience</h2>
+                </div>
+                <div class="col">
+                    <H3>WordsOnTheWeb - Website with a built-in text editor</H3>
+                    <H5 class="job-title">Creator/Developer... In Progress</H5>
+                    <ul>
+                        <li>Building a text editor that allows a user to input and edit text with formatting,
+                            highlighting, spacing, coloring, and more.
+                        </li>
+                        <li>
+                            Worked on my web development competency by practicing with HTML, CSS, and JavaScript.
+                        </li>
+                        <li>
+                            Access my GitHub link <a href="https://github.com/joerauc/textEditor" target="_blank">here</a>.
+                        </li>
+                    </ul>
+                    <H3>BMO Direct Invest - Remote</H3>
+                    <H5 class="job-title">Investment Advisor... Nov 2021 - Present</H5>
+                    <ul>
+                        <li>
+                            Simplified complex finance subjects so that clients could have a better
+                            understanding of their financial plans.
+                        </li>
+                        <li>
+                            Coordinated tasks with coworkers to better distribute our responsibilities.
+                        </li>
+                        <li>
+                            Diffused escalated client conversations by maintaining tone and professionalism.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Languages -->
+            <div class="row py-2 body-even" id="languages">
+                <div class="col-md-3 ml-auto"> 
+                    <h2 class="body-title">Languages</h2>
+                </div>
+                <div class="col">
+                    
+                    <h3>Proficient</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <h3>Intermediate</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>HTML</li>
+                        <li>PostgreSQL</li>
+                        <li>CSS</li>
+                        <li>Insomnia</li>
+                        <li>GitHub</li>
+                    </ul>
+                    <h3>Beginner</h3>
+                        <li>Bootstrap</li>
+                        <li>Django</li>
+                        <li>Flask</li>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="row py-2 body-even" id="education">
+                <div class="col-md-3 ml-auto"> 
+                    <h2 class="body-title">Education</h2>
+                </div>
+                <div class="col">
+                    <h3>College</h3>
+                    <ul>
+                        <li>Indiana University, Kelley School of Business</li>
+                        <ul>
+                            <li>GPA: 3.59/4.00</li>
+                            <li>Bachelors in Finance</li>
+                            <li>Bachelors in Marketing</li>
+                        </ul>
+                    </ul>
+                    <h3>College Experience</h3>
+                    <ul>
+                        <li>Direct admit to the STEM college at Indiana University.</li>
+                        <ul>
+                            <li>Direct admit scholarship recipient.</li>
+                            <li>Transferred to IU's Kelly School of Business.</li>
+                        </ul>
+                        <li>Created an HTML-based website with links to navigate between pages</li>
+                        <li>Made a working Pong game.</li>
+                    </ul>
+                    <h3>High School Experience</h3>
+                    <ul>
+                        <li>Worked with Java to create small projects. One of which was the peg solitare game commonly found at Cracker Barrel.</li>
+                        <li>Won a Computer Sceince competition for a $1000 scholarship at Augustana College.</li>
+                        <li>Tested highly enough on the Computer Science AP exam to gain college credit.</li>
+                    </ul>    
+                </div>
+            </div>
+        </div>
+
+        <!---->
+        <!-- Contact -->
+        <div class="container" id="contact-me">
+            <!--
+            <div class="row row-content py-4">
+                <div class="col">
+                    <h2>I'm interested in...</h2>
+                </div>
+            </div>
+            <div class="row row-content d-flex justify-content-center">
+                <div class="col-sm-4">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3>Interviews</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3>Mentorship</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3>Fun Questions</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>...</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!--
+            <div class="row row-content">
+                <div class="col-12 py-4 d-flex justify-content-center">
+                    <form action="" method="post">
+                        <fieldset>
+                            <legend>Contact Me!</legend>
+                            <div>
+                                <label>Name:</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" />
+                            </div>
+                            <div>
+                                <label>Email address:</label>
+                                <input type="email" id="email" name="email" placeholder="JohnDoe@email.com" />
+                            </div>
+                            <div>
+                                <label>Subject:</label>
+                                <input type="text" id="subject" name="subject" placeholder="Please enter your subject" />
+                            </div>
+                            <div>
+                                <label>Message:</label>
+                                <input type="text" id="message" name="message" placeholder="Please enter your message" />
+                            </div>
+                        </fieldset>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+            -->
+        </div>
+    </main>
+
+    <!-- Footer -->    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- webpage links. Delete if using sticky-top navbar -->
+                </div>
+                <div class="col">
+                    <!-- socials -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>
