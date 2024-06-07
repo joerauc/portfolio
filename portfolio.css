@@ -10,7 +10,6 @@ body {
 nav {
     background: rgb(231, 123, 0);
     overflow: hidden;
-    position: scroll;
 }
 
 p, li {
@@ -43,12 +42,6 @@ nav .btn {
     position: sticky;
     top: 2em;
 }
-
-/*
-.body-even {
-    background-color: rgb(241, 241, 241);
-}
-*/
 
 .carousel-control-next, .carousel-control-prev {
     filter: invert(100%);
